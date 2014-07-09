@@ -13,12 +13,13 @@
         android:xlargeScreens="true"
         android:anyDensity="true"/>
 
-	<uses-permission android:name="android.permission.INTERNET" />
-	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
 	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
 	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 	
     <application
 		android:icon="@drawable/app_icon"
@@ -33,5 +34,12 @@
             <meta-data android:name="unityplayer.UnityActivity" android:value="true" />
             <meta-data android:name="unityplayer.ForwardNativeEventsToDalvik" android:value="false" />
         </activity>
+		
+		<activity
+		  android:name="com.vungle.publisher.FullScreenAdActivity"
+		  android:configChanges="keyboardHidden|orientation|screenSize"
+			android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+		/>
+		<service android:name="com.vungle.publisher.VungleService" android:exported="false"	/>
     </application>
 </manifest>
